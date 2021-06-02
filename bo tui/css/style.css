@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0 15%; }
+
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2em 0; }
+  header nav {
+    display: flex;
+    margin-bottom: 10%; }
+    header nav .left_nav {
+      width: 20%;
+      padding-top: 7px;
+      margin-left: 22px; }
+      header nav .left_nav p {
+        position: relative; }
+        header nav .left_nav p img {
+          background-color: #4f63d5;
+          border-radius: 100px;
+          color: white;
+          width: 1.5rem;
+          position: absolute;
+          top: 0.15rem;
+          left: -1.2rem;
+          padding: 4px; }
+        header nav .left_nav p span {
+          margin-left: 6%;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          font-weight: bolder;
+          color: #3e3d48;
+          text-shadow: 0 1px #3e3d48; }
+    header nav .right_nav {
+      width: 100%; }
+      header nav .right_nav .menu {
+        float: right;
+        list-style-type: none; }
+        header nav .right_nav .menu .menu-item {
+          display: inline-block;
+          margin: 0 1rem;
+          padding: 10px 25px;
+          border-radius: 7px;
+          font-weight: 600;
+          font-size: 1.2rem; }
+          header nav .right_nav .menu .menu-item a {
+            color: #828187;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px; }
+            header nav .right_nav .menu .menu-item a:hover {
+              color: #f75a5b; }
+        header nav .right_nav .menu #login {
+          background-color: #f75a5b;
+          border: #f75a5b solid 1px; }
+          header nav .right_nav .menu #login a {
+            color: #fff; }
+          header nav .right_nav .menu #login:hover {
+            background-color: #fff; }
+            header nav .right_nav .menu #login:hover a {
+              color: #f75a5b; }
+
+.background_header {
+  display: flex; }
+  .background_header .bg_des,
+  .background_header .bg_img {
+    width: 100%; }
+  .background_header .bg_des {
+    margin-right: 125px; }
+    .background_header .bg_des .textbox h1,
+    .background_header .bg_des .textbox p {
+      margin: 15px 0; }
+    .background_header .bg_des .textbox h1 {
+      color: #262b44;
+      font-size: 3rem; }
+    .background_header .bg_des .textbox p {
+      color: #9d9da3;
+      font-size: 1.3rem;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px; }
+    .background_header .bg_des .btn_control {
+      display: flex; }
+      .background_header .bg_des .btn_control a {
+        text-decoration: none;
+        width: 100%; }
+      .background_header .bg_des .btn_control .btn {
+        display: inline-block;
+        margin-right: 5%;
+        margin-top: 7%;
+        width: 180px;
+        padding: 1.2rem;
+        text-align: center;
+        border-radius: 10px;
+        font-weight: 600;
+        box-shadow: 0 4px 10px -2px #4f63d5; }
+        .background_header .bg_des .btn_control .btn:hover {
+          background-color: #fff; }
+      .background_header .bg_des .btn_control .btn-chrome {
+        border: #4f63d5 solid 1px;
+        background-color: #4f63d5;
+        color: #fff; }
+        .background_header .bg_des .btn_control .btn-chrome:hover {
+          color: #4f63d5; }
+      .background_header .bg_des .btn_control .btn-firefox {
+        border: #6b6b71 solid 1px;
+        background-color: #f3f4f6;
+        color: #6b6b71; }
+  .background_header .bg_img {
+    position: relative; }
+    .background_header .bg_img .box-bg {
+      background-color: #4f63d5;
+      width: 200%;
+      height: 22rem;
+      border-radius: 15rem;
+      z-index: -1;
+      position: absolute;
+      top: 31%;
+      left: 42%; }
+
+/*# sourceMappingURL=style.css.map */

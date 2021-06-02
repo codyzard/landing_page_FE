@@ -1,0 +1,424 @@
+$bookmark_color: #4f63d5;
+$white: #fff;
+$lighter_red: #f75a5b;
+$white_gray: #9d9da3;
+$dark_blue: #262b44;
+$screen_border_color: #343434;
+$grey: #6b6b71;
+$padding_body_hor: 250px;
+$padding_body_ver: 30px;
+$radius_size: 7px;
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 16px;
+}
+.common_display {
+  text-align: center;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  top: 0;
+  header {
+    .main_nav {
+      background-color: $white;
+      position: sticky;
+      top: 0;
+      margin-bottom: 3rem;
+      display: flex;
+      padding: $padding_body_ver $padding_body_hor;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        position: relative;
+      }
+      .menu_items {
+        text-transform: uppercase;
+        padding: 10px 25px;
+        color: $grey;
+        font-weight: 500;
+        text-shadow: 0 0.3px $grey;
+        &:hover {
+          color: $lighter_red;
+        }
+      }
+      #login {
+        color: white;
+        background-color: $lighter_red;
+        border-radius: $radius_size;
+        border: $lighter_red solid 1px;
+        &:hover {
+          background-color: $white;
+          color: $lighter_red;
+        }
+      }
+    }
+    .background_header {
+      padding: 10px $padding_body_hor;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 450px auto;
+      .bg_des {
+        .textbox {
+          h1 {
+            font-size: 2.3rem;
+          }
+          p {
+            font-size: 1.2rem;
+            padding: 20px 0;
+            color: $grey;
+            max-width: 700px;
+          }
+        }
+        .btn_control {
+          margin: 20px 0;
+          .btn {
+            width: 100px;
+            padding: 15px 30px;
+            border-radius: $radius_size;
+            margin-right: 10px;
+          }
+          .btn-chrome {
+            background-color: $bookmark_color;
+            color: $white;
+            border: $bookmark_color solid 1px;
+            box-shadow: 0 4px 10px -2px $bookmark_color;
+            &:hover {
+              background-color: $white;
+              color: $bookmark_color;
+            }
+          }
+          .btn-firefox {
+            background-color: $white_gray;
+            color: $grey;
+            border: $grey solid 1px;
+            box-shadow: 0 4px 10px -2px $white_gray;
+            &:hover {
+              background-color: $white;
+            }
+          }
+        }
+      }
+      .cover img {
+        max-width: 100%;
+        float: right;
+      }
+    }
+  }
+  .features {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      margin: 20px auto;
+      max-width: 450px;
+      line-height: 1.5rem;
+      color: $grey;
+    }
+    .list_features {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      .feature_item {
+        margin: 10px 0;
+        padding: 30px 50px;
+        color: $dark_blue;
+        font-weight: 500;
+        border-bottom: $dark_blue solid 1px;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+          color: $lighter_red;
+          transform: scaleY(1.2);
+        }
+        &:active {
+          border-bottom: $lighter_red solid 5px;
+        }
+      }
+      .item_focus {
+        border-bottom: $lighter_red solid 5px;
+      }
+    }
+  }
+  .tabs_content {
+    .tab {
+      display: none;
+      grid-template-columns: auto 450px;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      padding: $padding_body_ver $padding_body_hor;
+      .tab_des {
+        padding: 0 0 0 3rem;
+        h1 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1.2rem;
+          padding: 20px 0;
+          color: $grey;
+          max-width: 700px;
+          line-height: 1.6;
+        }
+        .btn-info {
+          text-decoration: none;
+          color: $white;
+          background-color: $bookmark_color;
+          padding: 12px 30px;
+          border-radius: $radius_size;
+          border: 1px solid $bookmark_color;
+          &:hover {
+            background-color: $white;
+            color: $bookmark_color;
+          }
+        }
+      }
+      .tab_cover {
+        img {
+          max-width: 25rem;
+        }
+      }
+    }
+    .tab_focus {
+      display: grid;
+    }
+  }
+  .extension {
+    margin: 3rem 0;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      margin: 20px auto;
+      line-height: 1.5rem;
+      max-width: 450px;
+      color: $grey;
+    }
+    .extension_grid {
+      display: flex;
+      justify-content: center;
+      #download_firefox {
+        position: relative;
+        top: 4rem;
+      }
+      #download_opera {
+        position: relative;
+        top: 7rem;
+      }
+      .download_item {
+        margin: 0 20px;
+        padding: 10px 50px;
+        box-shadow: 0 10px 11px -5px rgba(83, 104, 223, 0.8);
+        max-width: 100%;
+        .textbox {
+          margin: 20px 0;
+          h2 {
+            font-size: 1.2rem;
+          }
+          p {
+            color: $grey;
+            line-height: 1.6;
+          }
+          hr {
+            margin: 40px 0;
+            border: none;
+            border-bottom: 5px dotted $white_gray;
+            width: 100%;
+          }
+          .btn-download {
+            text-decoration: none;
+            color: $white;
+            background-color: $bookmark_color;
+            padding: 12px 30px;
+            border-radius: $radius_size;
+            border: 1px solid $bookmark_color;
+            width: 100%;
+            &:hover {
+              background-color: $white;
+              color: $bookmark_color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .faq {
+    margin: 15rem 0;
+    padding: $padding_body_ver $padding_body_hor;
+    h1 {
+      font-size: 1.8rem;
+    }
+    p {
+      padding: 20px 0;
+      font-size: 1.2rem;
+      color: $grey;
+      line-height: 1.6;
+    }
+    .faq_list {
+      padding: 0px 2rem;
+      ul {
+        list-style: none;
+        .first {
+          border-top: $white_gray solid 1px;
+        }
+        li {
+          text-align: left;
+          padding: 20px 0;
+          cursor: pointer;
+          border-bottom: $white_gray solid 1px;
+          &:hover {
+            color: $lighter_red;
+          }
+          span {
+            float: right;
+            .fa-chevron-down {
+              display: none;
+            }
+          }
+          p {
+            font-size: 0.9rem;
+            padding: 10px 0;
+            display: none;
+          }
+        }
+      }
+    }
+    .btn-info {
+      margin: 30px 0;
+      display: inline-block;
+      text-decoration: none;
+      color: $white;
+      background-color: $bookmark_color;
+      padding: 12px 30px;
+      border-radius: $radius_size;
+      border: 1px solid $bookmark_color;
+      &:hover {
+        background-color: $white;
+        color: $bookmark_color;
+      }
+    }
+  }
+  .newsletter {
+    background-color: rgba(84, 100, 220, 0.9);
+    padding: 4rem 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: lighter;
+    }
+    p {
+      font-weight: 700;
+      font-size: 2rem;
+      max-width: 450px;
+      line-height: 1.5;
+      padding: 20px 0;
+    }
+    input {
+      height: 40px;
+      width: 275px;
+      border-radius: $radius_size;
+      border: $lighter_red solid 3px;
+      text-indent: 0.5em;
+      &::placeholder {
+        text-transform: uppercase;
+        color: $lighter_red;
+      }
+    }
+    #contact {
+      padding: 10px 17px;
+      cursor: pointer;
+      color: white;
+      background-color: $lighter_red;
+      border-radius: $radius_size;
+      border: $lighter_red solid 1px;
+      &:hover {
+        background-color: $white;
+        color: $lighter_red;
+      }
+    }
+  }
+  footer{
+    background-color: $dark_blue;
+    text-transform: $white;
+    .footer_menu{
+      position: relative;
+      display:flex;
+      justify-content: space-between;
+      padding: 40px 5rem;
+    }
+    .menu{
+      img{
+        position: relative;
+        top: 0.5rem
+      }
+      a{
+        display: inline-block;
+        align-items: center;
+        text-decoration: none;
+        color: $white;
+        text-transform: uppercase;
+        padding: 0 30px;
+        &:hover{
+          color: $lighter_red;
+          transform: scale(1.5, 1.5);
+        }
+      }
+    }
+    .social{
+      a{
+        display: inline-block;
+        text-decoration: none;
+        color: $white;
+        padding: 0 10px;
+        font-size: 1.5rem;
+        .fa-facebook-f:before, .fa-twitter:before {
+          font-size: 30px;
+        }
+        &:hover{
+          color: $lighter_red;
+          transform: scale(1.5, 1.5);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  section {
+    header {
+      .main_nav,
+      .background_header {
+        padding: $padding_body_ver 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1145px) {
+  .btn-download {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 1024px) {
+  .btn-download {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 1600px) {
+  section {
+    header {
+      .main_nav,
+      .background_header {
+        padding: $padding_body_ver 100px;
+      }
+    }
+  }
+}
