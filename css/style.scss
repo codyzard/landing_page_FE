@@ -24,18 +24,27 @@ $radius_size: 7px;
 }
 section {
   top: 0;
+  header,
+  .tabs_content,
+  .faq {
+    padding: $padding_body_ver 15%;
+  }
   header {
+    max-width: 100%;
     .main_nav {
       background-color: $white;
-      position: sticky;
+      padding: $padding_body_ver 15%;
+      position: fixed;
       top: 0;
-      margin-bottom: 3rem;
+      right: 0;
+      width: 100%;
       display: flex;
-      padding: $padding_body_ver $padding_body_hor;
       justify-content: space-between;
       align-items: center;
-      .logo {
-        position: relative;
+      z-index: 1000;
+      height: 70px;
+      .menu_mobile {
+        display: none;
       }
       .menu_items {
         text-transform: uppercase;
@@ -59,11 +68,12 @@ section {
       }
     }
     .background_header {
-      padding: 10px $padding_body_hor;
+      margin-top: 4rem;
       display: grid;
       align-items: center;
       grid-template-columns: 450px auto;
       .bg_des {
+        max-width: 100%;
         .textbox {
           h1 {
             font-size: 2.3rem;
@@ -78,7 +88,8 @@ section {
         .btn_control {
           margin: 20px 0;
           .btn {
-            width: 100px;
+            display: inline-block;
+            margin: 5px 0;
             padding: 15px 30px;
             border-radius: $radius_size;
             margin-right: 10px;
@@ -107,6 +118,7 @@ section {
       .cover img {
         max-width: 100%;
         float: right;
+        animation: float 3s linear infinite;
       }
     }
   }
@@ -152,7 +164,6 @@ section {
       position: relative;
       justify-content: center;
       align-items: center;
-      padding: $padding_body_ver $padding_body_hor;
       .tab_des {
         padding: 0 0 0 3rem;
         h1 {
@@ -181,6 +192,7 @@ section {
       .tab_cover {
         img {
           max-width: 25rem;
+          animation: float 3s linear infinite;
         }
       }
     }
@@ -231,6 +243,7 @@ section {
             width: 100%;
           }
           .btn-download {
+            display: inline-block;
             text-decoration: none;
             color: $white;
             background-color: $bookmark_color;
@@ -248,8 +261,7 @@ section {
     }
   }
   .faq {
-    margin: 15rem 0;
-    padding: $padding_body_ver $padding_body_hor;
+    margin: 10rem 0;
     h1 {
       font-size: 1.8rem;
     }
@@ -333,6 +345,7 @@ section {
       }
     }
     #contact {
+      margin: 10px 0;
       padding: 10px 17px;
       cursor: pointer;
       color: white;
@@ -345,44 +358,45 @@ section {
       }
     }
   }
-  footer{
+  footer {
     background-color: $dark_blue;
     text-transform: $white;
-    .footer_menu{
+    .footer_menu {
       position: relative;
-      display:flex;
+      display: flex;
       justify-content: space-between;
       padding: 40px 5rem;
     }
-    .menu{
-      img{
+    .menu {
+      img {
         position: relative;
-        top: 0.5rem
+        top: 0.5rem;
       }
-      a{
+      a {
         display: inline-block;
         align-items: center;
         text-decoration: none;
         color: $white;
         text-transform: uppercase;
         padding: 0 30px;
-        &:hover{
+        &:hover {
           color: $lighter_red;
           transform: scale(1.5, 1.5);
         }
       }
     }
-    .social{
-      a{
+    .social {
+      a {
         display: inline-block;
         text-decoration: none;
         color: $white;
         padding: 0 10px;
         font-size: 1.5rem;
-        .fa-facebook-f:before, .fa-twitter:before {
+        .fa-facebook-f:before,
+        .fa-twitter:before {
           font-size: 30px;
         }
-        &:hover{
+        &:hover {
           color: $lighter_red;
           transform: scale(1.5, 1.5);
         }
@@ -393,32 +407,161 @@ section {
 
 @media (max-width: 960px) {
   section {
+    header,
+    .tabs_content,
+    .faq {
+      padding: $padding_body_ver 30px;
+    }
     header {
-      .main_nav,
+      .main_nav {
+        padding: $padding_body_ver 30px;
+        width: 100%;
+        right: 0;
+        .menu {
+          display: none;
+        }
+        .menu_mobile {
+          display: inline-block;
+          .toogle_menu {
+            cursor: pointer;
+            &:hover {
+              color: $lighter_red;
+            }
+          }
+          .list_menu_mobile {
+            background-color: rgba(38, 45, 71, .9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .logo {
+              display: inline-block;
+              position: relative;
+              width: 60%;
+              padding: 0 30px;
+              margin: 30px 0;
+              .toogle_menu {
+                float: right;
+              }
+              img {
+                position: absolute;
+                top: 15%;
+              }
+            }
+            .item_first{
+              border-top: $white solid 1px;
+            }
+            .menu_mobile_item{
+              text-align: center;
+              color: $white;
+              text-transform: uppercase;
+              width: 60%;
+              padding: 20px 0;
+              margin: 10px 0;
+              border-bottom: $white solid 1px;
+              &:hover {
+                border: $white solid 1px;
+                border-radius: 7px;
+              }
+            }
+            .social {
+              padding: 50px 0;
+              .fa-facebook-f:before,
+              .fa-twitter:before {
+                font-size: 30px;
+              }
+              .social_item {
+                padding: 30px 10px;
+                color: $white;
+              }
+            }
+            #close_mobile_menu {
+              color: $white;
+              cursor: pointer;
+              &:hover {
+                color: $lighter_red;
+              }
+            }
+          }
+        }
+      }
+
       .background_header {
-        padding: $padding_body_ver 50px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        .bg_des {
+          text-align: center;
+        }
+      }
+    }
+    .features {
+      .list_features {
+        padding: 0 30px;
+        display: block;
+        .first {
+          border-top: $dark_blue solid 1px;
+        }
+      }
+    }
+    .tabs_content {
+      .tab {
+        grid-template-columns: none;
+        justify-content: center;
+        .tab_des {
+          text-align: center;
+          padding: 0 5%;
+          width: 100%;
+        }
+        .tab_cover {
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .extension {
+      .extension_grid {
+        flex-direction: column;
+      }
+    }
+    .faq {
+      margin: 0.5rem 0;
+      padding: $padding_body_hor 3%;
+    }
+    footer {
+      .footer_menu {
+        flex-direction: column;
+        text-align: center;
+        .menu {
+          a {
+            display: block;
+            margin: 30px 0;
+          }
+        }
+        .social {
+          a {
+            margin-bottom: 30px;
+            display: block;
+          }
+        }
       }
     }
   }
 }
 
-@media (max-width: 1145px) {
-  .btn-download {
-    font-size: 0.8rem;
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem);
   }
-}
-@media (max-width: 1024px) {
-  .btn-download {
-    font-size: 0.6rem;
-  }
-}
-@media (max-width: 1600px) {
-  section {
-    header {
-      .main_nav,
-      .background_header {
-        padding: $padding_body_ver 100px;
-      }
-    }
+  50% {
+    transform: translateY(-1.5rem);
   }
 }

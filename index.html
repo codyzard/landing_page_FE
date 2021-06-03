@@ -1,296 +1,312 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bookmark manager</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <section>
-      <header>
-        <nav class="main_nav">
-          <p class="logo">
-            <img src="./images/logo-bookmark.svg" alt="bookmark" />
-          </p>
-          <div class="menu">
-            <a href="#" class="menu_items">Feature</a>
-            <a href="#" class="menu_items">Pricing</a>
-            <a href="#" class="menu_items">Contact</a>
-            <a href="#" class="menu_items" id="login">Login</a>
-          </div>
-        </nav>
-        <div class="background_header">
-          <div class="bg_des">
-            <div class="textbox">
-              <h1>A Simple Bookmark Manager</h1>
-              <p>
-                A clean and simple interface to organize your favourite
-                websites. Open a new browser tab and see your sites load
-                instantly. try it for free.
-              </p>
-            </div>
-            <div class="btn_control">
-              <a href="#" class="btn btn-chrome">Get it on Chrome</a>
-              <a href="#" class="btn btn-firefox">Get it on Firefox</a>
-            </div>
-          </div>
-          <div class="cover">
-            <img src="/images/illustration-hero.svg" alt="bookmark" />
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmark manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+  <section>
+    <header>
+      <nav class="main_nav">
+        <p class="logo">
+          <img src="./images/logo-bookmark.svg" alt="bookmark" />
+        </p>
+        <div class="menu">
+          <a href="#" class="menu_items">Feature</a>
+          <a href="#" class="menu_items">Pricing</a>
+          <a href="#" class="menu_items">Contact</a>
+          <a href="#" class="menu_items" id="login">Login</a>
+        </div>
+        <div class="menu_mobile">
+          <span class="toogle_menu" id="open_mobile_menu"><i class="fas fa-bars fa-2x"></i></span>
+          <div class="list_menu_mobile">
+            <p class="logo">
+              <span><img src="/images/logo-bookmark-white.svg" alt=""></span>
+              <span class="toogle_menu" id="close_mobile_menu"><i class="fas fa-times fa-2x"></i></span>
+            </p>
+            <a href="#" class="menu_mobile_item item_first">Feature</a>
+            <a href="#" class="menu_mobile_item">Pricing</a>
+            <a href="#" class="menu_mobile_item">Contact</a>
+            <a href="#" class="menu_mobile_item">Login</a>
+            <p class="social">
+              <a href="#" class="social_item"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social_item"><i class="fab fa-twitter"></i></a>
+            </p>
           </div>
         </div>
-      </header>
-    </section>
-    <section>
-      <div class="features common_display">
-        <h1>Features</h1>
-        <p>
-          Our aim is to make it quick and easy for you to access your favourite
-          websites. Your bookmarks sync between your devices so you can acess
-          them on the go.
-        </p>
-        <ul class="list_features">
-          <li class="feature_item item_focus" id="bookmarking">
-            Simple Bookmarking
+      </nav>
+      <div class="background_header">
+        <div class="bg_des">
+          <div class="textbox">
+            <h1>A Simple Bookmark Manager</h1>
+            <p>
+              A clean and simple interface to organize your favourite
+              websites. Open a new browser tab and see your sites load
+              instantly. try it for free.
+            </p>
+          </div>
+          <div class="btn_control">
+            <a href="#" class="btn btn-chrome">Get it on Chrome</a>
+            <a href="#" class="btn btn-firefox">Get it on Firefox</a>
+          </div>
+        </div>
+        <div class="cover">
+          <img src="/images/illustration-hero.svg" alt="bookmark" />
+        </div>
+      </div>
+    </header>
+  </section>
+  <section>
+    <div class="features common_display">
+      <h1>Features</h1>
+      <p>
+        Our aim is to make it quick and easy for you to access your favourite
+        websites. Your bookmarks sync between your devices so you can acess
+        them on the go.
+      </p>
+      <ul class="list_features">
+        <li class="feature_item item_focus first" id="bookmarking">
+          Simple Bookmarking
+        </li>
+        <li class="feature_item" id="searching">Speedy Searching</li>
+        <li class="feature_item" id="sharing">Easy Sharing</li>
+      </ul>
+    </div>
+    <div class="tabs_content">
+      <div class="tab tab_focus" id="tab_bookmarking">
+        <div class="tab_cover">
+          <img src="/images/illustration-hero.svg" alt="bookmarking" />
+        </div>
+        <div class="tab_des">
+          <h1>Bookmark in one click</h1>
+          <p>
+            Organize your bookmarks however you like. Our simple drag-and-drop
+            interface gives you complete control over how you manage your
+            favourites sites.
+          </p>
+          <a href="#" class="btn btn-info">More info</a>
+        </div>
+      </div>
+      <div class="tab" id="tab_searching">
+        <div class="tab_cover">
+          <img src="/images/illustration-features-tab-2.svg" alt="bookmarking" />
+        </div>
+        <div class="tab_des">
+          <h1>Intelligent search</h1>
+          <p>
+            Our powerful search feature will help you find saved sites in no
+            tiem at all. No need to trawl through all of your bookmarks.
+          </p>
+          <a href="#" class="btn btn-info">More info</a>
+        </div>
+      </div>
+      <div class="tab" id="tab_sharing">
+        <div class="tab_cover">
+          <img src="/images/illustration-features-tab-3.svg" alt="bookmarking" />
+        </div>
+        <div class="tab_des">
+          <h1>Share your bookmarks</h1>
+          <p>
+            Easily share your bookmarks and collections with others. Create a
+            shareable link that you can send at the click of a button.
+          </p>
+          <a href="#" class="btn btn-info">More info</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="extension common_display">
+      <h1>Download the extension</h1>
+      <p>
+        We've got more browsers in the pipeline. Please do let us know if
+        you've got a favourite you'd like us to prioritize.
+      </p>
+      <div class="extension_grid">
+        <div class="download_item" id="download_chrome">
+          <img src="/images/logo-chrome.svg" alt="chrome" />
+          <div class="textbox">
+            <h2>Add to Chrome</h2>
+            <p>Minimum version 62</p>
+            <hr />
+            <a href="#" class="btn btn-download">Add & Install Exntension</a>
+          </div>
+        </div>
+        <div class="download_item" id="download_firefox">
+          <img src="/images/logo-firefox.svg" alt="firefox" />
+          <div class="textbox">
+            <h2>Add to Firefox</h2>
+            <p>Minimum version 55</p>
+            <hr />
+            <a href="#" class="btn btn-download">Add & Install Exntension</a>
+          </div>
+        </div>
+        <div class="download_item" id="download_opera">
+          <img src="/images/logo-opera.svg" alt="opera" />
+          <div class="textbox">
+            <h2>Add to Opera</h2>
+            <p>Minimum version 46</p>
+            <hr />
+            <a href="#" class="btn btn-download">Add & Install Exntension</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="faq common_display">
+      <h1>Frequently Asked Question</h1>
+      <p>
+        Here are some of our FAQs. If you have any other questions you'd like
+        answered please feel free to email us
+      </p>
+      <div class="faq_list">
+        <ul>
+          <li class="question_item first">
+            What is Bookmark?<span><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-down"></i></span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+              pariatur possimus numquam distinctio magni, ad cupiditate odio
+              similique nesciunt fuga quod labore recusandae officiis eum
+              voluptatibus provident praesentium dolorem culpa.
+            </p>
           </li>
-          <li class="feature_item" id="searching">Speedy Searching</li>
-          <li class="feature_item" id="sharing">Easy Sharing</li>
+          <li class="question_item">
+            How can I request a new browser?<span><i class="fas fa-chevron-left"></i><i
+                class="fas fa-chevron-down"></i></span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+              pariatur possimus numquam distinctio magni, ad cupiditate odio
+              similique nesciunt fuga quod labore recusandae officiis eum
+              voluptatibus provident praesentium dolorem culpa.
+            </p>
+          </li>
+          <li class="question_item">
+            Is there a mobile app?<span><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-down"></i></span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+              pariatur possimus numquam distinctio magni, ad cupiditate odio
+              similique nesciunt fuga quod labore recusandae officiis eum
+              voluptatibus provident praesentium dolorem culpa.
+            </p>
+          </li>
+          <li class="question_item">
+            What about other Chromium browsers?<span><i class="fas fa-chevron-left"></i><i
+                class="fas fa-chevron-down"></i></span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+              pariatur possimus numquam distinctio magni, ad cupiditate odio
+              similique nesciunt fuga quod labore recusandae officiis eum
+              voluptatibus provident praesentium dolorem culpa.
+            </p>
+          </li>
         </ul>
       </div>
-      <div class="tabs_content">
-        <div class="tab tab_focus" id="tab_bookmarking">
-          <div class="tab_cover">
-            <img
-              src="/images/illustration-features-tab-1.svg"
-              alt="bookmarking"
-            />
-          </div>
-          <div class="tab_des">
-            <h1>Bookmark in one click</h1>
-            <p>
-              Organize your bookmarks however you like. Our simple drag-and-drop
-              interface gives you complete control over how you manage your
-              favourites sites.
-            </p>
-            <a href="#" class="btn btn-info">More info</a>
-          </div>
+      <a href="#" class="btn btn-info">More info</a>
+    </div>
+  </section>
+  <section>
+    <div class="newsletter common_display">
+      <h2>35,000+ already joined</h2>
+      <p>Stay up-to-date with what we're doing</p>
+      <div class="form_group">
+        <form action="">
+          <input type="email" name="email" placeholder="Email" />
+          <button type="submit" name="contact" id="contact">Contact Us</a>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="footer_menu">
+        <div class="menu">
+          <img src="/images/logo-bookmark-footer.svg" class="menu_item" alt="logo" />
+          <a href="#" class="menu_item">features</a>
+          <a href="#" class="menu_item">pricing</a>
+          <a href="#" class="menu_item">contact</a>
         </div>
-        <div class="tab" id="tab_searching">
-          <div class="tab_cover">
-            <img
-              src="/images/illustration-features-tab-2.svg"
-              alt="bookmarking"
-            />
-          </div>
-          <div class="tab_des">
-            <h1>Intelligent search</h1>
-            <p>
-              Our powerful search feature will help you find saved sites in no
-              tiem at all. No need to trawl through all of your bookmarks.
-            </p>
-            <a href="#" class="btn btn-info">More info</a>
-          </div>
-        </div>
-        <div class="tab" id="tab_sharing">
-          <div class="tab_cover">
-            <img
-              src="/images/illustration-features-tab-3.svg"
-              alt="bookmarking"
-            />
-          </div>
-          <div class="tab_des">
-            <h1>Share your bookmarks</h1>
-            <p>
-              Easily share your bookmarks and collections with others. Create a
-              shareable link that you can send at the click of a button.
-            </p>
-            <a href="#" class="btn btn-info">More info</a>
-          </div>
+        <div class="social">
+          <a href="#" class="social_item"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social_item"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
-    </section>
-    <section>
-      <div class="extension common_display">
-        <h1>Download the extension</h1>
-        <p>
-          We've got more browsers in the pipeline. Please do let us know if
-          you've got a favourite you'd like us to prioritize.
-        </p>
-        <div class="extension_grid">
-          <div class="download_item" id="download_chrome">
-            <img src="/images/logo-chrome.svg" alt="chrome" />
-            <div class="textbox">
-              <h2>Add to Chrome</h2>
-              <p>Minimum version 62</p>
-              <hr />
-              <a href="#" class="btn btn-download">Add & Install Exntension</a>
-            </div>
-          </div>
-          <div class="download_item" id="download_firefox">
-            <img src="/images/logo-firefox.svg" alt="firefox" />
-            <div class="textbox">
-              <h2>Add to Firefox</h2>
-              <p>Minimum version 55</p>
-              <hr />
-              <a href="#" class="btn btn-download">Add & Install Exntension</a>
-            </div>
-          </div>
-          <div class="download_item" id="download_opera">
-            <img src="/images/logo-opera.svg" alt="opera" />
-            <div class="textbox">
-              <h2>Add to Opera</h2>
-              <p>Minimum version 46</p>
-              <hr />
-              <a href="#" class="btn btn-download">Add & Install Exntension</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="faq common_display">
-        <h1>Frequently Asked Question</h1>
-        <p>
-          Here are some of our FAQs. If you have any other questions you'd like
-          answered please feel free to email us
-        </p>
-        <div class="faq_list">
-          <ul>
-            <li class="question_item first">
-              What is Bookmark?<span
-                ><i class="fas fa-chevron-left"></i
-                ><i class="fas fa-chevron-down"></i
-              ></span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
-                pariatur possimus numquam distinctio magni, ad cupiditate odio
-                similique nesciunt fuga quod labore recusandae officiis eum
-                voluptatibus provident praesentium dolorem culpa.
-              </p>
-            </li>
-            <li class="question_item">
-              How can I request a new browser?<span
-                ><i class="fas fa-chevron-left"></i
-                ><i class="fas fa-chevron-down"></i
-              ></span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
-                pariatur possimus numquam distinctio magni, ad cupiditate odio
-                similique nesciunt fuga quod labore recusandae officiis eum
-                voluptatibus provident praesentium dolorem culpa.
-              </p>
-            </li>
-            <li class="question_item">
-              Is there a mobile app?<span
-                ><i class="fas fa-chevron-left"></i
-                ><i class="fas fa-chevron-down"></i
-              ></span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
-                pariatur possimus numquam distinctio magni, ad cupiditate odio
-                similique nesciunt fuga quod labore recusandae officiis eum
-                voluptatibus provident praesentium dolorem culpa.
-              </p>
-            </li>
-            <li class="question_item">
-              What about other Chromium browsers?<span
-                ><i class="fas fa-chevron-left"></i
-                ><i class="fas fa-chevron-down"></i
-              ></span>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
-                pariatur possimus numquam distinctio magni, ad cupiditate odio
-                similique nesciunt fuga quod labore recusandae officiis eum
-                voluptatibus provident praesentium dolorem culpa.
-              </p>
-            </li>
-          </ul>
-        </div>
-        <a href="#" class="btn btn-info">More info</a>
-      </div>
-    </section>
-    <section>
-      <div class="newsletter common_display">
-        <h2>35,000+ already joined</h2>
-        <p>Stay up-to-date with what we're doing</p>
-        <div class="form_group">
-          <form action="">
-            <input type="email" name="email" placeholder="Email"/>
-            <button type="submit" name="contact" id="contact">Contact Us</a>
-          </form>
-        </div>
-      </div>
-      <footer>
-        <div class="footer_menu">
-            <div class="menu">
-              <img src="/images/logo-bookmark-footer.svg" alt="logo" />
-              <a href="#" class="menu_item">features</a>
-              <a href="#" class="menu_item">pricing</a>
-              <a href="#" class="menu_item">contact</a>
-            </div>
-          <div class="social">
-            <a href="#" class="social_item"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="#" class="social_item"><i class="fab fa-twitter"></i></a>
-          </div>
-        </div>
-      </footer>
-    </section>
-    <script type="text/javascript">
-      //Features
-      var active_item = (feature_item, tab_item) => {
-        let feature_current = document.getElementsByClassName("item_focus")[0];
-        feature_current.className = feature_current.className.replace(
-          "item_focus",
-          ""
-        );
-        feature_item.className += " item_focus";
+    </footer>
+  </section>
 
-        let tab_current = document.getElementsByClassName("tab_focus")[0];
-        tab_current.className = tab_current.className.replace("tab_focus", "");
-        tab_item.className += " tab_focus";
+  <script type="text/javascript">
+    //Features
+    var active_item = (feature_item, tab_item) => {
+      let feature_current = document.getElementsByClassName("item_focus")[0];
+      feature_current.className = feature_current.className.replace(
+        "item_focus",
+        ""
+      );
+      feature_item.className += " item_focus";
+
+      let tab_current = document.getElementsByClassName("tab_focus")[0];
+      tab_current.className = tab_current.className.replace("tab_focus", "");
+      tab_item.className += " tab_focus";
+    };
+    let list_feature = document.getElementsByClassName("feature_item");
+    let list_tab_feature = document.getElementsByClassName("tab");
+    for (i = 0; i < list_feature.length; i++) {
+      let feature_item = list_feature[i];
+      let tab_item = list_tab_feature[i];
+      list_feature[i].onclick = () => {
+        active_item(feature_item, tab_item);
       };
-      let list_feature = document.getElementsByClassName("feature_item");
-      let list_tab_feature = document.getElementsByClassName("tab");
-      for (i = 0; i < list_feature.length; i++) {
-        let feature_item = list_feature[i];
-        let tab_item = list_tab_feature[i];
-        list_feature[i].onclick = () => {
-          active_item(feature_item, tab_item);
-        };
+    }
+    //Features
+    var onToggleAnswer = (faq) => {
+      let open = faq.getElementsByTagName("i")[0];
+      let close = faq.getElementsByTagName("i")[1];
+      let answer = faq.getElementsByTagName("p")[0];
+      if (close.style.display === "none" || close.style.display === "") {
+        answer.style.display = "block";
+        close.style.display = "inline";
+        open.style.display = "none";
+      } else {
+        answer.style.display = "none";
+        close.style.display = "none";
+        open.style.display = "inline";
       }
-      //Features
-      var onToggleAnswer = (faq) => {
-        let open = faq.getElementsByTagName("i")[0];
-        let close = faq.getElementsByTagName("i")[1];
-        let answer = faq.getElementsByTagName("p")[0];
-        if (close.style.display === "none" || close.style.display === "") {
-          answer.style.display = "block";
-          close.style.display = "inline";
-          open.style.display = "none";
-        } else {
-          answer.style.display = "none";
-          close.style.display = "none";
-          open.style.display = "inline";
+    };
+    //FAQs
+    let list_faq = document.getElementsByClassName("question_item");
+    for (i = 0; i < list_faq.length; i++) {
+      let faq = list_faq[i];
+      faq.onclick = () => {
+        onToggleAnswer(faq);
+      };
+    }
+      //FAQs
+
+      //Mobile menu
+      onToggleMenu = (e) => {
+        let mobile_menu = document.getElementsByClassName('list_menu_mobile')[0];
+        if(e.id.includes('close')){
+          mobile_menu.style.visibility= 'hidden';
+          return;
         }
-      };
-      //FAQs
-      let list_faq = document.getElementsByClassName("question_item");
-      for (i = 0; i < list_faq.length; i++) {
-        let faq = list_faq[i];
-        faq.onclick = () => {
-          onToggleAnswer(faq);
-        };
+        else if(e.id.includes('open')){
+          mobile_menu.style.visibility= 'visible';
+          return;
+        }
+        else return;
+        console.log(e);
       }
-      //FAQs
-    </script>
-  </body>
+      let close_btn = document.getElementById('close_mobile_menu');
+      let open_btn = document.getElementById('open_mobile_menu');
+      close_btn.onclick = () => onToggleMenu(close_btn);
+      open_btn.onclick = () => onToggleMenu(open_btn);
+      //Mobile menu
+  </script>
+</body>
+
 </html>

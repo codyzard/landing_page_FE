@@ -14,70 +14,83 @@
 
 section {
   top: 0; }
-  section header .main_nav {
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-    margin-bottom: 3rem;
-    display: flex;
-    padding: 30px 250px;
-    justify-content: space-between;
-    align-items: center; }
-    section header .main_nav .logo {
-      position: relative; }
-    section header .main_nav .menu_items {
-      text-transform: uppercase;
-      padding: 10px 25px;
-      color: #6b6b71;
-      font-weight: 500;
-      text-shadow: 0 0.3px #6b6b71; }
-      section header .main_nav .menu_items:hover {
-        color: #f75a5b; }
-    section header .main_nav #login {
-      color: white;
-      background-color: #f75a5b;
-      border-radius: 7px;
-      border: #f75a5b solid 1px; }
-      section header .main_nav #login:hover {
-        background-color: #fff;
-        color: #f75a5b; }
-  section header .background_header {
-    padding: 10px 250px;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 450px auto; }
-    section header .background_header .bg_des .textbox h1 {
-      font-size: 2.3rem; }
-    section header .background_header .bg_des .textbox p {
-      font-size: 1.2rem;
-      padding: 20px 0;
-      color: #6b6b71;
-      max-width: 700px; }
-    section header .background_header .bg_des .btn_control {
-      margin: 20px 0; }
-      section header .background_header .bg_des .btn_control .btn {
-        width: 100px;
-        padding: 15px 30px;
-        border-radius: 7px;
-        margin-right: 10px; }
-      section header .background_header .bg_des .btn_control .btn-chrome {
-        background-color: #4f63d5;
-        color: #fff;
-        border: #4f63d5 solid 1px;
-        box-shadow: 0 4px 10px -2px #4f63d5; }
-        section header .background_header .bg_des .btn_control .btn-chrome:hover {
-          background-color: #fff;
-          color: #4f63d5; }
-      section header .background_header .bg_des .btn_control .btn-firefox {
-        background-color: #9d9da3;
+  section header,
+  section .tabs_content,
+  section .faq {
+    padding: 30px 15%; }
+  section header {
+    max-width: 100%; }
+    section header .main_nav {
+      background-color: #fff;
+      padding: 30px 15%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      height: 70px; }
+      section header .main_nav .menu_mobile {
+        display: none; }
+      section header .main_nav .menu_items {
+        text-transform: uppercase;
+        padding: 10px 25px;
         color: #6b6b71;
-        border: #6b6b71 solid 1px;
-        box-shadow: 0 4px 10px -2px #9d9da3; }
-        section header .background_header .bg_des .btn_control .btn-firefox:hover {
-          background-color: #fff; }
-    section header .background_header .cover img {
-      max-width: 100%;
-      float: right; }
+        font-weight: 500;
+        text-shadow: 0 0.3px #6b6b71; }
+        section header .main_nav .menu_items:hover {
+          color: #f75a5b; }
+      section header .main_nav #login {
+        color: white;
+        background-color: #f75a5b;
+        border-radius: 7px;
+        border: #f75a5b solid 1px; }
+        section header .main_nav #login:hover {
+          background-color: #fff;
+          color: #f75a5b; }
+    section header .background_header {
+      margin-top: 4rem;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 450px auto; }
+      section header .background_header .bg_des {
+        max-width: 100%; }
+        section header .background_header .bg_des .textbox h1 {
+          font-size: 2.3rem; }
+        section header .background_header .bg_des .textbox p {
+          font-size: 1.2rem;
+          padding: 20px 0;
+          color: #6b6b71;
+          max-width: 700px; }
+        section header .background_header .bg_des .btn_control {
+          margin: 20px 0; }
+          section header .background_header .bg_des .btn_control .btn {
+            display: inline-block;
+            margin: 5px 0;
+            padding: 15px 30px;
+            border-radius: 7px;
+            margin-right: 10px; }
+          section header .background_header .bg_des .btn_control .btn-chrome {
+            background-color: #4f63d5;
+            color: #fff;
+            border: #4f63d5 solid 1px;
+            box-shadow: 0 4px 10px -2px #4f63d5; }
+            section header .background_header .bg_des .btn_control .btn-chrome:hover {
+              background-color: #fff;
+              color: #4f63d5; }
+          section header .background_header .bg_des .btn_control .btn-firefox {
+            background-color: #9d9da3;
+            color: #6b6b71;
+            border: #6b6b71 solid 1px;
+            box-shadow: 0 4px 10px -2px #9d9da3; }
+            section header .background_header .bg_des .btn_control .btn-firefox:hover {
+              background-color: #fff; }
+      section header .background_header .cover img {
+        max-width: 100%;
+        float: right;
+        animation: float 3s linear infinite; }
   section .features h1 {
     font-size: 2rem; }
   section .features p {
@@ -109,8 +122,7 @@ section {
     grid-template-columns: auto 450px;
     position: relative;
     justify-content: center;
-    align-items: center;
-    padding: 30px 250px; }
+    align-items: center; }
     section .tabs_content .tab .tab_des {
       padding: 0 0 0 3rem; }
       section .tabs_content .tab .tab_des h1 {
@@ -132,7 +144,8 @@ section {
           background-color: #fff;
           color: #4f63d5; }
     section .tabs_content .tab .tab_cover img {
-      max-width: 25rem; }
+      max-width: 25rem;
+      animation: float 3s linear infinite; }
   section .tabs_content .tab_focus {
     display: grid; }
   section .extension {
@@ -171,6 +184,7 @@ section {
             border-bottom: 5px dotted #9d9da3;
             width: 100%; }
           section .extension .extension_grid .download_item .textbox .btn-download {
+            display: inline-block;
             text-decoration: none;
             color: #fff;
             background-color: #4f63d5;
@@ -182,8 +196,7 @@ section {
               background-color: #fff;
               color: #4f63d5; }
   section .faq {
-    margin: 15rem 0;
-    padding: 30px 250px; }
+    margin: 10rem 0; }
     section .faq h1 {
       font-size: 1.8rem; }
     section .faq p {
@@ -250,6 +263,7 @@ section {
         text-transform: uppercase;
         color: #f75a5b; }
     section .newsletter #contact {
+      margin: 10px 0;
       padding: 10px 17px;
       cursor: pointer;
       color: white;
@@ -286,25 +300,118 @@ section {
       color: #fff;
       padding: 0 10px;
       font-size: 1.5rem; }
-      section footer .social a .fa-facebook-f:before, section footer .social a .fa-twitter:before {
+      section footer .social a .fa-facebook-f:before,
+      section footer .social a .fa-twitter:before {
         font-size: 30px; }
       section footer .social a:hover {
         color: #f75a5b;
         transform: scale(1.5, 1.5); }
 
 @media (max-width: 960px) {
-  section header .main_nav,
+  section header,
+  section .tabs_content,
+  section .faq {
+    padding: 30px 30px; }
+  section header .main_nav {
+    padding: 30px 30px;
+    width: 100%;
+    right: 0; }
+    section header .main_nav .menu {
+      display: none; }
+    section header .main_nav .menu_mobile {
+      display: inline-block; }
+      section header .main_nav .menu_mobile .toogle_menu {
+        cursor: pointer; }
+        section header .main_nav .menu_mobile .toogle_menu:hover {
+          color: #f75a5b; }
+      section header .main_nav .menu_mobile .list_menu_mobile {
+        background-color: rgba(38, 45, 71, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        section header .main_nav .menu_mobile .list_menu_mobile .logo {
+          display: inline-block;
+          position: relative;
+          width: 60%;
+          padding: 0 30px;
+          margin: 30px 0; }
+          section header .main_nav .menu_mobile .list_menu_mobile .logo .toogle_menu {
+            float: right; }
+          section header .main_nav .menu_mobile .list_menu_mobile .logo img {
+            position: absolute;
+            top: 15%; }
+        section header .main_nav .menu_mobile .list_menu_mobile .item_first {
+          border-top: #fff solid 1px; }
+        section header .main_nav .menu_mobile .list_menu_mobile .menu_mobile_item {
+          text-align: center;
+          color: #fff;
+          text-transform: uppercase;
+          width: 60%;
+          padding: 20px 0;
+          margin: 10px 0;
+          border-bottom: #fff solid 1px; }
+          section header .main_nav .menu_mobile .list_menu_mobile .menu_mobile_item:hover {
+            border: #fff solid 1px;
+            border-radius: 7px; }
+        section header .main_nav .menu_mobile .list_menu_mobile .social {
+          padding: 50px 0; }
+          section header .main_nav .menu_mobile .list_menu_mobile .social .fa-facebook-f:before,
+          section header .main_nav .menu_mobile .list_menu_mobile .social .fa-twitter:before {
+            font-size: 30px; }
+          section header .main_nav .menu_mobile .list_menu_mobile .social .social_item {
+            padding: 30px 10px;
+            color: #fff; }
+        section header .main_nav .menu_mobile .list_menu_mobile #close_mobile_menu {
+          color: #fff;
+          cursor: pointer; }
+          section header .main_nav .menu_mobile .list_menu_mobile #close_mobile_menu:hover {
+            color: #f75a5b; }
   section header .background_header {
-    padding: 30px 50px; } }
-@media (max-width: 1145px) {
-  .btn-download {
-    font-size: 0.8rem; } }
-@media (max-width: 1024px) {
-  .btn-download {
-    font-size: 0.6rem; } }
-@media (max-width: 1600px) {
-  section header .main_nav,
-  section header .background_header {
-    padding: 30px 100px; } }
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center; }
+    section header .background_header .bg_des {
+      text-align: center; }
+  section .features .list_features {
+    padding: 0 30px;
+    display: block; }
+    section .features .list_features .first {
+      border-top: #262b44 solid 1px; }
+  section .tabs_content .tab {
+    grid-template-columns: none;
+    justify-content: center; }
+    section .tabs_content .tab .tab_des {
+      text-align: center;
+      padding: 0 5%;
+      width: 100%; }
+    section .tabs_content .tab .tab_cover img {
+      max-width: 100%; }
+  section .extension .extension_grid {
+    flex-direction: column; }
+  section .faq {
+    margin: 0.5rem 0;
+    padding: 250px 3%; }
+  section footer .footer_menu {
+    flex-direction: column;
+    text-align: center; }
+    section footer .footer_menu .menu a {
+      display: block;
+      margin: 30px 0; }
+    section footer .footer_menu .social a {
+      margin-bottom: 30px;
+      display: block; } }
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem); }
+  50% {
+    transform: translateY(-1.5rem); } }
 
 /*# sourceMappingURL=style.css.map */
